@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CreditScore AI - Intelligent machine learning powered creditworthiness assessment"
+    >
+
+    <title>CreditScore AI | Credit Risk Assessment</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND DECORATION
+    ========================================== -->
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="topbar">
+
+        <div class="topbar-inner">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <span>CS</span>
+                </div>
+
+                <div class="brand-text">
+                    <h1>CreditScore <span>AI</span></h1>
+                    <p>Intelligent Credit Assessment</p>
+                </div>
+
+            </div>
+
+
+            <div class="status-badge">
+
+                <span class="status-dot"></span>
+
+                <span>AI Model Online</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="main-container">
+
+
+        <!-- =====================================
+             HERO SECTION
+        ====================================== -->
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+
+                    <span class="sparkle">✦</span>
+
+                    AI-POWERED CREDIT ANALYSIS
+
+                </div>
+
+
+                <h2>
+                    Predict Credit Risk
+                    <span>Smarter & Faster.</span>
+                </h2>
+
+
+                <p class="hero-description">
+                    Enter the applicant's financial information and
+                    let our machine learning model analyze their
+                    creditworthiness in seconds.
+                </p>
+
+
+                <div class="hero-features">
+
+                    <div class="hero-feature">
+
+                        <span class="feature-check">✓</span>
+
+                        <div>
+                            <strong>Instant Analysis</strong>
+                            <small>AI-powered prediction</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-feature">
+
+                        <span class="feature-check">✓</span>
+
+                        <div>
+                            <strong>Risk Assessment</strong>
+                            <small>Data-driven results</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-feature">
+
+                        <span class="feature-check">✓</span>
+
+                        <div>
+                            <strong>Fast Results</strong>
+                            <small>Prediction in seconds</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             DASHBOARD GRID
+        ====================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =================================
+                 LEFT - APPLICATION FORM
+            ================================== -->
+
+            <div class="form-card">
+
+                <div class="card-header">
+
+                    <div class="card-header-icon">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <h3>Applicant Information</h3>
+
+                        <p>
+                            Enter the applicant's financial
+                            and credit details below.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="predictionForm"
+                    novalidate
+                >
+
+
+                    <!-- =========================
+                         SECTION 01
+                    ========================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span class="section-number">
+                                01
+                            </span>
+
+                            <div>
+                                <h4>Personal & Employment</h4>
+                                <p>Basic applicant information</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-grid">
+
+
+                            <!-- AGE -->
+
+                            <div class="input-group">
+
+                                <label for="age">
+                                    Age
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        👤
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="age"
+                                        name="age"
+                                        placeholder="e.g. 32"
+                                        min="18"
+                                        max="100"
+                                        step="1"
+                                        required
+                                    >
+
+                                    <span class="input-suffix">
+                                        years
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Applicant's current age
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- ANNUAL INCOME -->
+
+                            <div class="input-group">
+
+                                <label for="annual_income">
+                                    Annual Income
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="annual_income"
+                                        name="annual_income"
+                                        placeholder="e.g. 500000"
+                                        min="1"
+                                        step="1000"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Total yearly income
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- EMPLOYMENT YEARS -->
+
+                            <div class="input-group">
+
+                                <label for="employment_years">
+                                    Employment Years
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        💼
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="employment_years"
+                                        name="employment_years"
+                                        placeholder="e.g. 5"
+                                        min="0"
+                                        step="0.5"
+                                        required
+                                    >
+
+                                    <span class="input-suffix">
+                                        years
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Total employment experience
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         SECTION 02
+                    ========================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span class="section-number">
+                                02
+                            </span>
+
+                            <div>
+                                <h4>Financial Information</h4>
+                                <p>Current financial profile</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-grid">
+
+
+                            <!-- TOTAL DEBT -->
+
+                            <div class="input-group">
+
+                                <label for="total_debt">
+                                    Total Debt
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="total_debt"
+                                        name="total_debt"
+                                        placeholder="e.g. 200000"
+                                        min="0"
+                                        step="1000"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Current outstanding debt
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- CREDIT UTILIZATION -->
+
+                            <div class="input-group">
+
+                                <label for="credit_utilization">
+                                    Credit Utilization
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        %
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="credit_utilization"
+                                        name="credit_utilization"
+                                        placeholder="e.g. 30"
+                                        min="0"
+                                        max="100"
+                                        step="0.1"
+                                        required
+                                    >
+
+                                    <span class="input-suffix">
+                                        %
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Percentage of available credit used
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- OPEN ACCOUNTS -->
+
+                            <div class="input-group">
+
+                                <label for="num_open_accounts">
+                                    Open Credit Accounts
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        #
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="num_open_accounts"
+                                        name="num_open_accounts"
+                                        placeholder="e.g. 4"
+                                        min="0"
+                                        step="1"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Number of currently open accounts
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- LOAN AMOUNT -->
+
+                            <div class="input-group">
+
+                                <label for="loan_amount_requested">
+                                    Loan Amount Requested
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="loan_amount_requested"
+                                        name="loan_amount_requested"
+                                        placeholder="e.g. 250000"
+                                        min="0"
+                                        step="1000"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Amount requested for the new loan
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         SECTION 03
+                    ========================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-title">
+
+                            <span class="section-number">
+                                03
+                            </span>
+
+                            <div>
+                                <h4>Credit History</h4>
+                                <p>Historical credit behavior</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-grid">
+
+
+                            <!-- LATE PAYMENTS -->
+
+                            <div class="input-group">
+
+                                <label for="num_late_payments_2yrs">
+                                    Late Payments
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ⚠
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="num_late_payments_2yrs"
+                                        name="num_late_payments_2yrs"
+                                        placeholder="e.g. 0"
+                                        min="0"
+                                        step="1"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Late payments during the last 2 years
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- CREDIT HISTORY -->
+
+                            <div class="input-group">
+
+                                <label for="years_credit_history">
+                                    Credit History
+                                    <span>*</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ◷
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="years_credit_history"
+                                        name="years_credit_history"
+                                        placeholder="e.g. 8"
+                                        min="0"
+                                        step="0.5"
+                                        required
+                                    >
+
+                                    <span class="input-suffix">
+                                        years
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Length of established credit history
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         FORM FOOTER
+                    ========================== -->
+
+                    <div class="form-footer">
+
+                        <div class="required-note">
+
+                            <span>*</span>
+
+                            All fields are required
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            id="predictButton"
+                            class="predict-button"
+                        >
+
+                            <span class="button-icon">
+                                ✦
+                            </span>
+
+                            <span class="button-text">
+                                Analyze Creditworthiness
+                            </span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================
+                 RIGHT - RESULTS
+            ================================== -->
+
+            <div class="result-card">
+
+
+                <!-- RESULT HEADER -->
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span class="result-label">
+                            AI CREDIT ANALYSIS
+                        </span>
+
+                        <h3>
+                            Prediction Results
+                        </h3>
+
+                    </div>
+
+                    <div class="ai-icon">
+                        ✦
+                    </div>
+
+                </div>
+
+
+
+                <!-- ===============================
+                     EMPTY RESULT
+                ================================= -->
+
+                <div
+                    id="emptyResult"
+                    class="result-state empty-state"
+                >
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+                    <h4>
+                        Ready to Analyze
+                    </h4>
+
+                    <p>
+                        Complete the applicant information
+                        and click
+                        <strong>
+                            Analyze Creditworthiness
+                        </strong>
+                        to generate an AI prediction.
+                    </p>
+
+
+                    <div class="empty-features">
+
+                        <div>
+                            <span>✓</span>
+                            AI-powered analysis
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Instant prediction
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Risk assessment
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ===============================
+                     LOADING RESULT
+                ================================= -->
+
+                <div
+                    id="loadingResult"
+                    class="result-state loading-state hidden"
+                >
+
+                    <div class="loading-animation">
+
+                        <div class="loading-ring"></div>
+
+                        <span>AI</span>
+
+                    </div>
+
+                    <h4>
+                        Analyzing Profile...
+                    </h4>
+
+                    <p>
+                        Our machine learning model is evaluating
+                        the applicant's credit profile.
+                    </p>
+
+
+                    <div class="loading-bar">
+
+                        <div></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ===============================
+                     PREDICTION RESULT
+                ================================= -->
+
+                <div
+                    id="predictionResult"
+                    class="result-state prediction-state hidden"
+                >
+
+
+                    <!-- SCORE -->
+
+                    <div class="score-container">
+
+                        <span class="score-label">
+                            CREDITWORTHINESS SCORE
+                        </span>
+
+
+                        <div class="score-display">
+
+                            <span
+                                id="scoreValue"
+                                class="score-value"
+                            >
+                                --
+                            </span>
+
+                            <span class="score-max">
+                                / 100
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RISK BADGE -->
+
+                    <div class="risk-container">
+
+                        <span class="risk-title">
+                            Risk Assessment
+                        </span>
+
+
+                        <span
+                            id="riskBadge"
+                            class="risk-badge"
+                        >
+                            --
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- PREDICTION -->
+
+                    <div class="prediction-message">
+
+                        <div class="prediction-icon">
+                            ✓
+                        </div>
+
+
+                        <div>
+
+                            <span class="prediction-label">
+                                MODEL PREDICTION
+                            </span>
+
+                            <h4 id="predictionText">
+                                Prediction will appear here.
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DETAILS -->
+
+                    <div class="result-details">
+
+
+                        <div class="result-detail-row">
+
+                            <span>
+                                Risk Level
+                            </span>
+
+                            <strong id="riskLevel">
+                                --
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-detail-row">
+
+                            <span>
+                                Recommendation
+                            </span>
+
+                            <strong id="recommendation">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RESET -->
+
+                    <button
+                        type="button"
+                        id="resetButton"
+                        class="reset-button"
+                    >
+
+                        ↻
+                        Analyze Another Applicant
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             INFORMATION STRIP
+        ====================================== -->
+
+        <section class="info-strip">
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <strong>
+                        Fast Prediction
+                    </strong>
+
+                    <span>
+                        Results generated in seconds
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <strong>
+                        Machine Learning
+                    </strong>
+
+                    <span>
+                        Powered by your trained model
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    🔒
+                </div>
+
+                <div>
+
+                    <strong>
+                        Secure Processing
+                    </strong>
+
+                    <span>
+                        Data handled locally by the application
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026
+            <strong>CreditScore AI</strong>
+            · Intelligent Credit Risk Assessment
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
