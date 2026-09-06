@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AI-powered breast tumor classification using machine learning"
+    >
+
+    <title>MedPredict AI | Tumor Classification</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="topbar">
+
+        <div class="topbar-inner">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <span>MP</span>
+                </div>
+
+                <div class="brand-content">
+
+                    <h1>
+                        MedPredict <span>AI</span>
+                    </h1>
+
+                    <p>
+                        Intelligent Medical Classification
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-status">
+
+                <span class="status-dot"></span>
+
+                <span>AI Model Online</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="main-container">
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <span>✦</span>
+
+                    AI-POWERED MEDICAL ANALYSIS
+
+                </div>
+
+
+                <h2>
+
+                    Intelligent Tumor
+                    <span>Classification.</span>
+
+                </h2>
+
+
+                <p class="hero-description">
+
+                    Enter the cell-nuclei measurements from a
+                    digitized fine-needle aspirate and let our
+                    machine learning model classify the tumor
+                    as benign or malignant.
+
+                </p>
+
+
+                <div class="hero-features">
+
+                    <div class="hero-feature">
+
+                        <span class="feature-icon">
+                            ✓
+                        </span>
+
+                        <div>
+                            <strong>Instant Analysis</strong>
+                            <small>Machine learning prediction</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-feature">
+
+                        <span class="feature-icon">
+                            ✓
+                        </span>
+
+                        <div>
+                            <strong>Probability Score</strong>
+                            <small>Confidence-based results</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-feature">
+
+                        <span class="feature-icon">
+                            ✓
+                        </span>
+
+                        <div>
+                            <strong>Secure Processing</strong>
+                            <small>Data processed locally</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="medical-card">
+
+                    <div class="medical-card-icon">
+                        🧬
+                    </div>
+
+                    <span>
+                        ML CLASSIFICATION
+                    </span>
+
+                    <strong>
+                        Breast Tumor Analysis
+                    </strong>
+
+                    <small>
+                        10 clinical measurement features
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             EXAMPLES
+        ====================================== -->
+
+        <section class="example-section">
+
+            <div class="example-title">
+
+                <span class="example-icon">
+                    ⚡
+                </span>
+
+                <div>
+
+                    <strong>
+                        Quick Test
+                    </strong>
+
+                    <small>
+                        Load a sample profile
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="example-buttons">
+
+                <button
+                    type="button"
+                    class="example-btn benign-example"
+                    data-example="benign_example"
+                >
+
+                    <span>●</span>
+
+                    Load Benign Sample
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="example-btn malignant-example"
+                    data-example="malignant_example"
+                >
+
+                    <span>●</span>
+
+                    Load Malignant Sample
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             DASHBOARD
+        ====================================== -->
+
+        <section class="dashboard">
+
+
+            <!-- =================================
+                 INPUT FORM
+            ================================== -->
+
+            <div class="form-card">
+
+                <div class="card-header">
+
+                    <div class="header-icon">
+                        🧬
+                    </div>
+
+                    <div>
+
+                        <span class="card-label">
+                            PATIENT MEASUREMENTS
+                        </span>
+
+                        <h3>
+                            Tumor Cell Features
+                        </h3>
+
+                        <p>
+                            Enter the mean measurements of
+                            the cell nuclei from the FNA sample.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <form
+                    id="disease-form"
+                    novalidate
+                >
+
+
+                    <!-- =========================
+                         SECTION 01
+                    ========================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Size Measurements
+                                </h4>
+
+                                <p>
+                                    Basic geometric characteristics
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-grid">
+
+
+                            <!-- RADIUS -->
+
+                            <div class="input-group">
+
+                                <label for="mean_radius">
+                                    Mean Radius
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ◉
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_radius"
+                                        name="mean radius"
+                                        value="14.0"
+                                        placeholder="e.g. 14.0"
+                                        required
+                                    >
+
+                                    <span class="input-unit">
+                                        mm
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Average radius of cell nuclei
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- TEXTURE -->
+
+                            <div class="input-group">
+
+                                <label for="mean_texture">
+                                    Mean Texture
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ▦
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_texture"
+                                        name="mean texture"
+                                        value="19.0"
+                                        placeholder="e.g. 19.0"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Variation in grayscale intensity
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- PERIMETER -->
+
+                            <div class="input-group">
+
+                                <label for="mean_perimeter">
+                                    Mean Perimeter
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ◯
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_perimeter"
+                                        name="mean perimeter"
+                                        value="90.0"
+                                        placeholder="e.g. 90.0"
+                                        required
+                                    >
+
+                                    <span class="input-unit">
+                                        mm
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Average nuclear perimeter
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- AREA -->
+
+                            <div class="input-group">
+
+                                <label for="mean_area">
+                                    Mean Area
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ▣
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_area"
+                                        name="mean area"
+                                        value="600.0"
+                                        placeholder="e.g. 600"
+                                        required
+                                    >
+
+                                    <span class="input-unit">
+                                        mm²
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Average nuclear area
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         SECTION 02
+                    ========================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Cell Characteristics
+                                </h4>
+
+                                <p>
+                                    Shape and structural measurements
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-grid">
+
+
+                            <!-- SMOOTHNESS -->
+
+                            <div class="input-group">
+
+                                <label for="mean_smoothness">
+                                    Mean Smoothness
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ≋
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_smoothness"
+                                        name="mean smoothness"
+                                        value="0.095"
+                                        placeholder="e.g. 0.095"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Local variation in radius lengths
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- COMPACTNESS -->
+
+                            <div class="input-group">
+
+                                <label for="mean_compactness">
+                                    Mean Compactness
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ◆
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_compactness"
+                                        name="mean compactness"
+                                        value="0.100"
+                                        placeholder="e.g. 0.100"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Shape compactness measurement
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- CONCAVITY -->
+
+                            <div class="input-group">
+
+                                <label for="mean_concavity">
+                                    Mean Concavity
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ∿
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_concavity"
+                                        name="mean concavity"
+                                        value="0.090"
+                                        placeholder="e.g. 0.090"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Severity of concave portions
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- CONCAVE POINTS -->
+
+                            <div class="input-group">
+
+                                <label for="mean_concave_points">
+                                    Mean Concave Points
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        •
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_concave_points"
+                                        name="mean concave points"
+                                        value="0.050"
+                                        placeholder="e.g. 0.050"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Number of concave portions
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         SECTION 03
+                    ========================== -->
+
+                    <div class="form-section">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Shape & Complexity
+                                </h4>
+
+                                <p>
+                                    Additional morphological measurements
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-grid">
+
+
+                            <!-- SYMMETRY -->
+
+                            <div class="input-group">
+
+                                <label for="mean_symmetry">
+                                    Mean Symmetry
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ◇
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_symmetry"
+                                        name="mean symmetry"
+                                        value="0.180"
+                                        placeholder="e.g. 0.180"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Average symmetry of cell nuclei
+                                </small>
+
+                            </div>
+
+
+
+                            <!-- FRACTAL DIMENSION -->
+
+                            <div class="input-group">
+
+                                <label for="mean_fractal_dimension">
+                                    Mean Fractal Dimension
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ∞
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        step="any"
+                                        id="mean_fractal_dimension"
+                                        name="mean fractal dimension"
+                                        value="0.063"
+                                        placeholder="e.g. 0.063"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Complexity of nuclear boundary
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         FORM FOOTER
+                    ========================== -->
+
+                    <div class="form-footer">
+
+                        <div class="required-info">
+
+                            <span>*</span>
+
+                            All measurements are required
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            id="submit-btn"
+                            class="predict-button"
+                        >
+
+                            <span class="button-icon">
+                                ✦
+                            </span>
+
+                            <span class="button-text">
+                                Analyze Tumor
+                            </span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================
+                 RESULT CARD
+            ================================== -->
+
+            <div class="result-card" id="result-card">
+
+
+                <!-- RESULT HEADER -->
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span class="result-label">
+                            AI CLASSIFICATION
+                        </span>
+
+                        <h3>
+                            Analysis Result
+                        </h3>
+
+                    </div>
+
+
+                    <div class="result-ai-icon">
+                        🧠
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     INITIAL STATE
+                ================================== -->
+
+                <div
+                    id="emptyResult"
+                    class="result-empty"
+                >
+
+                    <div class="empty-result-icon">
+                        🧬
+                    </div>
+
+                    <h4>
+                        Ready for Analysis
+                    </h4>
+
+                    <p>
+                        Enter the tumor measurements and
+                        click <strong>Analyze Tumor</strong>
+                        to generate the machine learning
+                        classification.
+                    </p>
+
+
+                    <div class="result-checks">
+
+                        <div>
+                            <span>✓</span>
+                            AI-powered classification
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Probability analysis
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Instant results
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     LOADING STATE
+                ================================== -->
+
+                <div
+                    id="loadingResult"
+                    class="result-loading hidden"
+                >
+
+                    <div class="loading-circle">
+
+                        <div class="loading-spinner"></div>
+
+                        <span>
+                            AI
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        Analyzing Sample...
+                    </h4>
+
+                    <p>
+                        The machine learning model is
+                        evaluating the cell measurements.
+                    </p>
+
+
+                    <div class="analysis-progress">
+
+                        <div></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     ERROR
+                ================================== -->
+
+                <div
+                    id="error"
+                    class="error-message hidden"
+                ></div>
+
+
+
+                <!-- =================================
+                     PREDICTION
+                ================================== -->
+
+                <div
+                    id="predictionResult"
+                    class="prediction-result hidden"
+                >
+
+                    <!-- DIAGNOSIS -->
+
+                    <div class="diagnosis-section">
+
+                        <span class="diagnosis-label">
+                            DIAGNOSIS
+                        </span>
+
+
+                        <div class="diagnosis-row">
+
+                            <div
+                                id="diagnosisIcon"
+                                class="diagnosis-icon"
+                            >
+                                ✓
+                            </div>
+
+
+                            <div>
+
+                                <h4 id="diagnosisText">
+                                    --
+                                </h4>
+
+                                <p id="confidenceText">
+                                    Confidence: --
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONFIDENCE -->
+
+                    <div class="confidence-section">
+
+                        <div class="confidence-heading">
+
+                            <span>
+                                Model Confidence
+                            </span>
+
+                            <strong id="confidenceValue">
+                                --%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="confidence-track">
+
+                            <div
+                                id="confidenceBar"
+                                class="confidence-bar"
+                                style="width: 0"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PROBABILITIES -->
+
+                    <div class="probability-section">
+
+                        <div class="probability-title">
+                            Probability Breakdown
+                        </div>
+
+
+                        <div class="probability-grid">
+
+
+                            <!-- BENIGN -->
+
+                            <div
+                                class="probability-box benign-box"
+                            >
+
+                                <div class="probability-top">
+
+                                    <span class="probability-dot"></span>
+
+                                    <span>
+                                        Benign
+                                    </span>
+
+                                </div>
+
+
+                                <strong id="benignProbability">
+                                    --%
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- MALIGNANT -->
+
+                            <div
+                                class="probability-box malignant-box"
+                            >
+
+                                <div class="probability-top">
+
+                                    <span class="probability-dot"></span>
+
+                                    <span>
+                                        Malignant
+                                    </span>
+
+                                </div>
+
+
+                                <strong id="malignantProbability">
+                                    --%
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- INTERPRETATION -->
+
+                    <div
+                        id="resultInterpretation"
+                        class="interpretation"
+                    >
+
+                        <div class="interpretation-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Model Interpretation
+                            </strong>
+
+                            <p id="interpretationText">
+                                --
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RESET -->
+
+                    <button
+                        type="button"
+                        id="resetButton"
+                        class="reset-button"
+                    >
+
+                        ↻
+                        Analyze Another Sample
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             DISCLAIMER
+        ====================================== -->
+
+        <section class="disclaimer-card">
+
+            <div class="disclaimer-icon">
+                ⚕
+            </div>
+
+            <div>
+
+                <strong>
+                    Educational Use Only
+                </strong>
+
+                <p>
+                    This application is a machine learning
+                    demonstration based on the UCI Breast Cancer
+                    Wisconsin (Diagnostic) dataset. It is not a
+                    medical device and should not be used for
+                    diagnosis or treatment decisions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             INFO STRIP
+        ====================================== -->
+
+        <section class="info-strip">
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <strong>
+                        Fast Analysis
+                    </strong>
+
+                    <span>
+                        Predictions generated in seconds
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <strong>
+                        Machine Learning
+                    </strong>
+
+                    <span>
+                        Powered by your trained model
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    🔒
+                </div>
+
+                <div>
+
+                    <strong>
+                        Local Processing
+                    </strong>
+
+                    <span>
+                        Data handled by this application
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026
+            <strong>MedPredict AI</strong>
+            · Intelligent Medical Classification
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
