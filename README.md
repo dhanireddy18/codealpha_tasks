@@ -2,11 +2,11 @@
 
 This repository contains my projects and tasks completed as part of the CodeAlpha Internship.
 
-## Projects
+## 📁 Projects
 
-### 1. Disease Prediction System
+### 1. 🩺 Disease Prediction System
 
-A Machine Learning based web application that predicts whether a breast tumor is likely to be Benign or Malignant.
+A Machine Learning based web application that predicts whether a breast tumor is likely to be **Benign** or **Malignant** based on tumor measurement features.
 
 **Technologies:**
 - Python
@@ -14,8 +14,8 @@ A Machine Learning based web application that predicts whether a breast tumor is
 - Scikit-learn
 - Pandas
 - NumPy
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
 **Project Folder:**
@@ -23,9 +23,9 @@ A Machine Learning based web application that predicts whether a breast tumor is
 
 ---
 
-### 2. Credit Scoring Model
+### 2. 💳 Credit Scoring Model
 
-A Machine Learning based credit scoring application that predicts whether an applicant is Creditworthy or Not Creditworthy based on financial and credit-related features.
+A Machine Learning based web application that predicts whether an applicant is **Creditworthy** or **Not Creditworthy** based on financial and credit-related features.
 
 **Technologies:**
 - Python
@@ -33,8 +33,8 @@ A Machine Learning based credit scoring application that predicts whether an app
 - Scikit-learn
 - Pandas
 - NumPy
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
 **Project Folder:**
@@ -42,11 +42,31 @@ A Machine Learning based credit scoring application that predicts whether an app
 
 ---
 
-## Repository Structure
+## 🏗️ Repository Structure
 
 ```text
 codealpha_tasks/
 │
+├── README.md
+│
 ├── CodeAlpha_DiseasePrediction/
+│   ├── backend/
+│   └── frontend/
 │
 └── CodeAlpha_CreditScoringModel/
+    ├── backend/
+    └── frontend/
+
+🛠️ Technologies
+Python
+Machine Learning
+Scikit-learn
+Flask
+REST API
+Pandas
+NumPy
+HTML
+CSS
+JavaScript
+Git
+GitHub
